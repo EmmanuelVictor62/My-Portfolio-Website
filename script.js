@@ -1,5 +1,4 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script> 
-<script>
     var typed = new Typed('.type', {
     strings: 
     [
@@ -12,3 +11,5 @@
     showCursor: true,
     
   })  
+
+  

@@ -26,7 +26,7 @@ body{
 main p{
     margin-bottom: 20px;
     position: absolute;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif;
     font-weight:600;
     transform:translate(-50%,-50%);
 }
@@ -60,7 +60,7 @@ main .initial{
     align-items: center;
 }
 
-button{
+.btn button{
     background-color: rgba(255,255,0,0.9);
     height:40px;
     position:absolute;
@@ -76,7 +76,7 @@ button{
     display: inline-block;
 }
 
-.view-btn2{
+.btn .view-btn2{
     background-color: red;
     bottom:24%;
     display: inline-block;
@@ -270,105 +270,121 @@ h4{
 
 
 /* Third Layer style*/
-.third-layer{
-    background-color: rgba(235, 241, 243,0.2);
-    height: fit-content;
-    display: grid;
-    grid-template-columns: 300px 300px 300px;
-    line-height: 30px;
-    padding-left: 30px;
-    padding-right: 50px;
-    justify-content: space-evenly;
-}
-
-i{
-    font-size: 3.2em;
-    color:black;
-}
-
-.third-layer h1{
-     font-size: 23px;
-}
-
-.third-layer h4{
-    font-size: 20px;
-    font-weight: 400;
-    margin: 0px 0px 10px 0px ;
-}
-
-
-h2{
+/*start of the thirdLayer*/
+.Specialise{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    font-size: 28px;
-    text-transform: capitalize;
+    background: rgb(237, 239, 240);
+    margin: 0px;
+    padding-top:1em;
 }
 
-.firstSkill{
-    text-align: center;
+.thirdLayer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    background: rgb(237, 239, 240);
+    height: 100vh;
 }
 
-.third-layer div{
-    background-color: red;
-    margin-bottom: 70px;
-    border:1px solid black;
-    padding:10px 20px 10px 20px;
-    box-shadow: 4px 4px rgba(0,0,0,0.4);
-    border-radius: 4px;
-    transition:  4s linear 2s;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    cursor:pointer;  
-}
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .specialization-skill-box{
+    min-height: 400px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content:space-between;
+    box-shadow: 0 8px 30px rgba(0,0,0,.3);
+  }
 
-.third-layer div:hover{
-    width:300px;
-    height:300px;
+  .specialization-skill-box:hover{
+    box-shadow: 0 8px 30px rgba(0,0,0,.6);
+  }
+
+  .text{
+    padding: 2.2em;
+    line-height: 1.7em;
+    position: relative;
+    font-size: 18px;
+  }
+
+  .image{
+    background-color:rgb(250, 250, 250);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 3.5px solid #1a2B96;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display:flex;
+    justify-content:center;
     
-}
+  }
 
-@keyframes example {
-    from{background-color: blue;}
-    to{background-color: red;}
-}
+  .image .fa-solid{
+    position:absolute;
+    top:33%;
+    left:28%;
+    font-size:44px
+  }
 
-.secondSkills{
-    text-align: center;
-}
+  .image .fa-mobile-screen{
+    position:absolute;
+    top:35%;
+    left:35%;
+    font-size:44px
+  }
+  
+  .header{
+    background: linear-gradient(90deg, #1a2B96 0%, #d22B96 100%);
+    height: 140px;
+    border-radius: 10px 10px 0px 0px;
+    position:relative;
+    
+  }
+  
+  .quote{
+    font-size: 400%;
+    float: right;
+    opacity: .1;
+    transform: rotate(10deg) translate(-10px, -40px);
+   color:#4D3FA3;
+  }
+  
+  .skill{
+    color:white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size:1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
 
-.thirdSkills{
-    text-align: center;
-}
-
-.fourthSkills{
-    text-align: center;
-}
-
-.fifthSkills{
-    text-align: center;
-}
-
-.sixthSkills{
-    text-align: center;
-}
-
-   /*media query for third-layer*/
-   @media(max-width:950px){
-    .third-layer{grid-template-columns: 1fr 1fr;}
-}
-
-@media(max-width:800px){
-    .third-layer{
-        display:grid;
-    grid-template-columns: 1fr;
-    pointer-events:none ;
+/* Media Query for Specialization*/
+@media (max-width:900px){
+    .thirdLayer{
+        display: flex;
+        flex-direction: column;
+        flex:1 1 1;
+        height: fit-content;
     }
-
-    .third-layer:hover{
-        display:none;
+    .container{
+        padding: 1em 0 1em 0;
     }
 }
 
+/*Start of Skills Layer*/
 .skills{
     text-align: center;
 }
@@ -387,6 +403,10 @@ h2{
 .fourthLayer h4{
     font-size: 20px;
     margin:10px 0px 10px 0px
+}
+
+.fa-brands{
+    font-size:45px;
 }
 
 .fa-wordpress{
@@ -430,7 +450,8 @@ h2{
 }
 
 .fa-layer-group{
-    color:rgb(0,29,52)
+    color:rgb(0,29,52);
+    font-size:45px;
 }
 
 .fa-figma{
@@ -438,7 +459,8 @@ h2{
 }
 
 /* End of fourthLayer*/
-/* media query for fourthLayer*/
+
+/* media query for skillsLayer*/
 @media (max-width:900px){
     .fourthLayer{
         display:grid;
@@ -446,17 +468,26 @@ h2{
     }
 }
 
-/* Start of the fifth Layer*/
-h1{
-    text-align:center
+/* Flip Box Layer */
+#Portfolio{
+    background-image: linear-gradient(to right, #29323c , #485563);
+}
+
+.myProject{
+    text-align:center;
+    margin-bottom: 0px;
+    color:white;
+    padding-top: 1em;
 }
 
 .fifthLayer{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    background-color: rgb(38,38,38);
-    height:50em;
+    background-image: linear-gradient(to right, #29323c , #485563);
+    height:70em;
+    padding-top:5em;
+    padding-left: 6rem;
 }
 
 .flip-box {
@@ -483,21 +514,295 @@ h1{
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
     border:none;
     border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.3)
   }
 
   .flip-box-front img{
-    border:1px white solid;
-    border-radius:4px;
+    border:1px gray solid;
+    border-radius:6px;
     width:100%;
     height: 100%;
   }
 
   .flip-box-back {
-    background-color: black;
-    color: white;
+    background: rgb(237, 239, 240);
     transform: rotateY(180deg);
+    text-align: center;
   }
+
+  .flip-box-back h2{
+    font-size: 22px;
+    margin:2.5em 1px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .flip-box-back h4{
+    font-size:19px;
+    margin:40px 0px 0px 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:400;
+  }
+  
+  .flipBoxBtn{
+    background-color:#d22B96;
+    width:15rem;
+    margin-top:4em;
+    height:40px;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border-radius:4px;
+    border:none;
+  }
+
+/*media query for flipBox(ProjectLayer)*/
+@media (max-width:900px){
+    #Portfolio{
+        display:flex;
+        flex-direction: column;
+        flex:1 1;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .fifthLayer{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 0px;
+        height:fit-content;
+        padding:0px;
+    }
+
+    .myProject{
+        height: fit-content;
+    }
+
+    .flip-box{
+        margin:1em 0em 1em 0em;
+    }
+}
+
+
+
+/* Testimonial */
+
+.testimonial{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 5em;
+}
+
+.content{
+    display: grid;
+    width:100%;
+    margin-bottom: 3em;
+    padding:0px 30px 0px 30px;
+}
+
+.content h2{
+    font-size: 28px;
+}
+
+.contentDescription{
+    font-weight: 400;
+    font-size: 23px;
+    text-align: center;
+}
+
+.testim{
+    display: flex;
+    flex: 1 1 1;
+    justify-content: space-evenly;
+}
+
+
+
+.testimonyBox{
+    min-height: 350px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.3);
+    display: flex;
+    flex-flow: column;
+    justify-content:space-between;
+    cursor: pointer;
+}
+
+
+.text{
+    padding: 2.2em;
+    line-height: 1.7em;
+    position: relative;
+    font-size: 18px;
+}
+
+.box2 .quote{
+    font-size: 200%;
+    float: left;
+    opacity: 1;
+    transform: rotate(10deg) translate(-10px, -40px);
+    color:#4D3FA3;
+    margin-left: -30px;
+}
+
+.boxFooter{
+    background: linear-gradient(90deg, #2E3192 0%, #1BFFFF 100%);
+    height: 118px;
+    border-radius: 0px 0px 10px 10px;
+    position:relative;
+}
+
+.img{
+    
+    height: 118px;
+    width: 118px;
+    border-radius: 50%;
+    background-image: url("../thumbnails/img-1.webp");
+    background-position: center;
+    background-size: cover;
+    border: 5px solid white;
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+    display:flex;
+    justify-content:center;
+}
+
+.name{
+    color:white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size:1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+    margin: 0px;
+  }
+
+/*Media Query for testimonial layout*/
+@media(max-width:900px){
+    .testimonial{
+        display: grid;
+        grid-template-rows:  max-content 1fr;
+    }
+
+    .testim{
+        display: flex;
+        flex-direction: column;
+        flex:1 1 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content{
+        height:fit-content;
+        padding-left: 8px;
+    }
+
+    .content h2 , .content h4{
+        text-align: center;
+    }
+
+    .testimonyBox{
+        margin:1em 0em 1.5em 0em;
+    }
+}
+
+/*End of Testimonial Layout*/
+
+/* Contact Form */
+.contactSection{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 10px 30px 10px;
+    background-color: white;
+    background-image: linear-gradient(to right, #bdc2e8 , #e6dee9);
+}
+
+.contactDescription h2, .contactDescription h4{
+    font-size: 22px;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif;
+    text-align:start;
+    padding:0px 25px 0px 15px;
+    text-transform: none;
+}
+
+
+.contactForm{
+    float:left;
+    display: flex;
+    justify-content: center;
+    height:fit-content;
+}
+
+.contactForm2{
+    width:20rem;
+    border:0px solid black;
+    border-radius: 3px;
+    padding:10px 40px 55px 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-image: linear-gradient(to right, #fdfbfb , #ebedee);
+}
+
+.contactForm2 h4{
+    font-size: 17px;
+    font-family:'Times New Roman', Times, serif
+}
+
+input{
+    height:3em;
+    width:100%;
+    box-sizing: border-box;
+    box-shadow:inset 1px 1px 2px rgba(0,0,0,.2);
+    border:1px solid rgba(0,0,0,.3);
+    border-radius: 3px;
+    padding:15px 15px;
+}
+
+input::placeholder{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+input[type=text]:focus{
+    border:1px solid ;
+    font-size: 14px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.messageBox{
+    height:6.5em
+}
+
+.messageBtn{
+     color: white; 
+     height: 3em;
+     margin-top:30px;
+     background-color: blue;
+     border:none;
+     border-radius: 4px;
+     width:100%;
+}
+
+.messageBtn:hover{
+    background-color: #d22B96;
+}
+
+.messageBtn:active{
+    background-color: chartreuse;
+}
+
+
+@media(max-width:900px){
+    .contactSection{display:grid;
+    grid-template-columns: 1fr;
+width:100vw;}
+}
