@@ -721,14 +721,31 @@ h4{
 .contactSection{
     display:grid;
     grid-template-columns: 1fr 1fr;
+    position: relative;
     padding: 50px 10px 30px 10px;
     background-color: white;
     background-image: linear-gradient(to right, #bdc2e8 , #e6dee9);
 }
 
+.contactDescription{
+    z-index: 1;
+    position:absolute;
+    top:8em;
+    right:5em;
+    left:30em;
+    background-color: white;
+    padding-left: 5em;
+    height:24em;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-image: linear-gradient(to right, #accbee , #e7f0fd
+    );
+}
+
 .contactDescription h2, .contactDescription h4{
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 400;
     font-family:'Times New Roman', Times, serif;
     text-align:start;
     padding:0px 25px 0px 15px;
@@ -737,10 +754,10 @@ h4{
 
 
 .contactForm{
-    float:left;
     display: flex;
     justify-content: center;
     height:fit-content;
+    z-index: 1;
 }
 
 .contactForm2{
@@ -796,13 +813,29 @@ input[type=text]:focus{
     background-color: #d22B96;
 }
 
-.messageBtn:active{
-    background-color: chartreuse;
+#triangle_right {
+    position:absolute;
+    top:49px;
+    left:530px;
+    width: 0;
+    height: 0;
+    border-top: 270px solid transparent;
+    border-left: 140px solid blue;
+    border-bottom: 280px solid transparent;
+    z-index:0;
 }
 
 
 @media(max-width:900px){
     .contactSection{display:grid;
     grid-template-columns: 1fr;
-width:100vw;}
+    width:100vw;}
+
+    .contactForm2{
+        height: fit-content;
+    }
+
+    .contactDescription{
+       display: none;
+    }
 }
