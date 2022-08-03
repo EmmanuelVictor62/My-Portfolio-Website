@@ -375,6 +375,7 @@ font-size: 30px;
     }
     .container{
         padding: 1em 0 1em 0;
+        width:70vw;
     }
 }
 
