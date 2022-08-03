@@ -27,17 +27,28 @@ body{
 #Home h2{
     font-family:'Times New Roman', Times, serif;
     font-weight:600;
-    font-size:35px;
+    font-size:39px;
 }
 
 
 .type{
-    font-size:40px;
+    font-size:45px;
     margin-bottom: 20px;
     margin-top: 0px;
     text-align: center;
 }
 
+.type:after{
+    visibility: visible;
+    content: '';
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    width: 3px;
+    height: 42px;
+    top: 5px;
+    margin-left: 3px; 
+}
 
 main a{
     text-decoration: none;
@@ -89,7 +100,7 @@ main a{
 
 
   /* media query for home page*/
-@media (max-width:800px) {
+@media (max-width:900px) {
     .nav-link{display:none}
 }
 
@@ -99,13 +110,9 @@ main a{
         background-position: -550px;
         height:730px;}
 
-    .typ{display: flex;
-        top:49%;
-        text-align:center;
-        font-size:34px;
-        font-weight: 800;
-        white-space:wrap;
-        width:350px}
+    #Home{
+        font-size: 25px;
+    }
 
     .type{display: flex;
           text-align:center;
@@ -114,9 +121,6 @@ main a{
          white-space:wrap;
          width:350px}
 
-    main .initial{
-        font-size:40px;
-        top:30%}
     .nav-link{display:none}
     .left-section{font-size:28px; margin-left:10px;}
     .left-section span{font-size:28px}
@@ -324,7 +328,8 @@ font-size: 30px;
     .thirdLayer{
         display: flex;
         flex-direction: column;
-        flex:1 1 1;
+        justify-content: center;
+        align-items: center;
         height: fit-content;
     }
     .container{
