@@ -30,6 +30,10 @@ body{
     font-size:39px;
 }
 
+#Home button{
+    color:
+}
+
 
 .type{
     font-size:45px;
@@ -110,9 +114,10 @@ main a{
         background-position: -550px;
         height:730px;}
 
-    #Home{
+    #Home h2{
         font-size: 25px;
     }
+
 
     .type{display: flex;
           text-align:center;
@@ -171,6 +176,20 @@ main a{
     height:90vh;
     justify-content:stretch;
     align-items: center;
+}
+
+.aboutContent{
+    animation-duration:4s;
+    animation-name:.aboutContentSlide
+}
+
+@keyframes .aboutContentSlide{
+    from{
+        margin-left:100%
+    }
+    to{
+        margin-left:0%
+    }
 }
 
 .myDescription{
