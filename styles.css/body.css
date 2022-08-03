@@ -171,102 +171,74 @@ main a{
 
 /*Second Layer Style*/
 
-.title{
-    color:black;
-    display: flex;
-    justify-content: center;
-    text-decoration: underline;
+.aboutme{
+    height:fit-content;
 }
 
-.content{
-    display: inline-block;
-    width:750px;
-    padding-left: 30px;
-}
-
-h4{
-    font-size: 26px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.div{
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.description{
+.aboutImage{
+    border:white solid 5px;
+    background-color: lightgray;
     width:fit-content;
+    border-radius: 50px;
+    margin: 0px 0px 0px 60px;
+}
+
+
+.aboutContent{
+    display: flex;
+    flex-direction: row;
+    flex:1 1;
+    background-color: white;
+    height:90vh;
+    justify-content:stretch;
+    align-items: center;
+}
+
+.myDescription{
+   margin: 0px 70px 0px 70px;
+}
+
+.myDescription h2{
+font-size: 30px;
+}
+
+.myDescription h3{
+    margin-top: 0px;
     font-size: 22px;
     font-weight: 400;
-    line-height: 35px;
-    align-items: center;
+    margin-bottom: 15px;
 }
 
-.personal-info{
-    display: inline-block;
-    
-}
-
-.personal-info h1{
-    margin-top: -25px;
-    margin-left:15px;
-    text-transform:uppercase;
-    text-decoration: underline;
-    font-size: 25px;
-}
-
-.personal-info h4{
-    margin: 15px;
-    font-size:22px;
+.myDescription h3 span{
     font-weight: 600;
 }
 
-.personal-info h4 span{
+.myDescription h4{
+    font-size: 20px;
     font-weight: 400;
 }
 
-/* media query for second layer*/
+.myDescription h5{
+    font-size: 20px;
+    font-weight:400;
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
 
-@media screen and (max-width:800px){
-    .div{
-        display: grid;
-        grid-template-rows: max-content max-content;
-        margin-left: 0px;
-    }
-    .personal-info{
-        margin: 40px 0px 0px 0px ;
-    }
-
-    .personal-info h4{
-        font-size:15px;
-        margin-left:8px;
-    }
-    .personal-info h1{
-        font-size:19px;
-        margin-left:8px;
-    }
-    .description{
-        font-size:17px;
-        text-align: center;
-    }
-    h4{
-        font-size:20px;
-    }
-    .title{
-        font-size:25px;
-        margin-bottom: 0px;
-        
+@media(max-width:900px){
+    .aboutContent{
+        display:flex;
+        flex-direction: column;
+        flex:1;
+        height:fit-content;
     }
 
+    .aboutImage{
+
     }
-    .content{
-        padding-left:8px;
-        white-space: wrap;
-        max-width: fit-content;
-        
-    }
+}
 
 
 /* Third Layer style*/
@@ -464,7 +436,7 @@ h4{
 @media (max-width:900px){
     .fourthLayer{
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -596,21 +568,22 @@ h4{
     padding-bottom: 5em;
 }
 
-.content{
+.testimonialContent{
     display: grid;
     width:100%;
     margin-bottom: 3em;
-    padding:0px 30px 0px 30px;
 }
 
-.content h2{
+.testimonialContent h2{
     font-size: 28px;
+    text-align: center;
 }
 
 .contentDescription{
     font-weight: 400;
     font-size: 23px;
     text-align: center;
+    padding:0px 30px 0px 30px;
 }
 
 .testim{
@@ -813,14 +786,14 @@ input[type=text]:focus{
     background-color: #d22B96;
 }
 
-#triangle_right {
+#triangle-right {
     position:absolute;
     top:49px;
     left:530px;
     width: 0;
     height: 0;
     border-top: 270px solid transparent;
-    border-left: 140px solid blue;
+    border-left: 160px solid blue;
     border-bottom: 280px solid transparent;
     z-index:0;
 }
@@ -833,9 +806,14 @@ input[type=text]:focus{
 
     .contactForm2{
         height: fit-content;
+        width:40vw;
     }
 
     .contactDescription{
        display: none;
+    }
+
+    #triangle-right{
+        display:none;
     }
 }
