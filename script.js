@@ -12,4 +12,4 @@
     
   })  
 
-  
+  let canvas = document.querySelector(".aboutme")
