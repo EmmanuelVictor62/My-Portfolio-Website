@@ -33,30 +33,17 @@
                     </li>
                 </ul>
             </div>
-        </headeh4>
+        </header>
         <!--End of Header-->
 
         <main>
-            <div class="home" id="Home">
-            <h4 class="initial">Hi there,</h4>
-            <p class="typ">Welcome to my Universe</p>
-            <p class=".type"></p>
-            
-            <div class="btn">
-                    <button class="view-btn" >
-                        <a href="#Portfolio">View my Works</a>
-                    </button>
+            <section id="Home">
+                <h2>Hi there,</h2>
+                <h3 class="type"></h3>
+            </section>
+         <!--End of Home Page -->
 
-                    <button class="view-btn2" >
-                        <a href="#Contact">Hire Me</a>
-                    </button>
-
-                    <div class="scroll-down"></div>
-            </div>
-            </div>
-        <!--End of Home Page -->
-
-        <!--Start of the second Layer-->
+         <!--Start of the second Layer-->
             <section class="aboutme" id="About">
                 <div class="aboutContent">
                     <div class="aboutImage">
@@ -494,4 +481,21 @@
         </main>
     </body>
 
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script> 
+    
+    <script>
+        var typed = new Typed('.type', {
+        strings: 
+        [
+         `I am Emmanuel`, 
+          "Welcome to my Universe",
+        ],
+        backspeed:50,
+        loop:true,
+        showCursor: true,
+        
+      })  
+    
+        </script>
 </html>
